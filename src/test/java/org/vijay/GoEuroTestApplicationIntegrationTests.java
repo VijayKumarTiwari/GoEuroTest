@@ -36,7 +36,9 @@ public class GoEuroTestApplicationIntegrationTests {
         if (file.exists()) {
             file.delete();
         }
-        goEuroTestApplication.run("Berlin");
+        goEuroTestApplication.run();
+        assertFalse(file.exists());
+        goEuroTestApplication.run("");
         assertFalse(file.exists());
         goEuroTestApplication.run("", "");
         assertFalse(file.exists());
@@ -48,7 +50,7 @@ public class GoEuroTestApplicationIntegrationTests {
         if (file.exists()) {
             file.delete();
         }
-        goEuroTestApplication.run("Berlin", "");
+        goEuroTestApplication.run("Berlin");
         assertTrue(file.exists());
     }
 }

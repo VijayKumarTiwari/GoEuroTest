@@ -63,7 +63,9 @@ public class PositionService {
                         StringBuffer line = new StringBuffer();
                         line.append(position.get_id())
                                 .append(",")
+                                .append("\"")
                                 .append(position.getName())
+                                .append("\"")//as name might have "," so we put name in quotes
                                 .append(",")
                                 .append(position.getType())
                                 .append(",")

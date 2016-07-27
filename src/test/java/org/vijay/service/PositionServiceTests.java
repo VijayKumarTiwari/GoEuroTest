@@ -72,7 +72,7 @@ public class PositionServiceTests {
         try (BufferedReader reader = new BufferedReader(new FileReader(new File("output.csv")))) {
             assertNotNull(reader);
             assertEquals("_id,name,type,latitude,longitude", reader.readLine());
-            assertEquals("1,test_name,test_type,1.0,1.0", reader.readLine());
+            assertEquals("1,\"test_name\",test_type,1.0,1.0", reader.readLine());
             assertNull(reader.readLine());
         } finally {
 

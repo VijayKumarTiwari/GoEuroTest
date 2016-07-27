@@ -51,9 +51,7 @@ public class GoEuroTestApplication implements CommandLineRunner {
     }
 
     private String getCityNameFromArgs(String... args) {
-        //We check for length < 2 cause spring sends one argument for ansi.enabled flag
-        //so to handle this extra argument we are checking for < 2
-        if (args == null || args.length < 2 || args[0].trim().equals("")) {
+        if (args == null || args.length == 0 || args[0].trim().equals("")) {
             logger.error("Please pass the City Name");
             return null;
         } else {
